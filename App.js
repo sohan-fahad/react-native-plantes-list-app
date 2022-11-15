@@ -4,10 +4,9 @@ import { useCallback, useEffect } from "react";
 import { StyleSheet, Text, View } from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
-import CustomText from "./src/components/Text/CustomText";
 import colors from "./src/theme/colors";
-import typography from "./src/theme/typography";
 import HomeScreen from "./src/screens/HomeScreen/HomeScreen";
+import DetailsScreen from "./src/screens/DetailsScreen/DetailsScreen";
 
 const Stack = createNativeStackNavigator();
 
@@ -27,6 +26,7 @@ export default function App() {
       <NavigationContainer>
         <Stack.Navigator screenOptions={{ headerShown: false }}>
           <Stack.Screen name="Home" component={HomeScreen} />
+          <Stack.Screen name="Details" component={DetailsScreen} />
         </Stack.Navigator>
       </NavigationContainer>
       <StatusBar style="light" />
