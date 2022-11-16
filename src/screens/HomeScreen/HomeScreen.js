@@ -22,7 +22,9 @@ export default HomeScreen = ({ navigation }) => {
         keyExtractor={(item, index) => index}
         renderItem={({ item }) => {
           return (
-            <Pressable onPress={() => navigation.navigate("Details")}>
+            <Pressable
+              onPress={() => navigation.navigate("Details", { planet: item })}
+            >
               <View style={styles.item}>
                 <View style={styles.titleWrapper}>
                   <View
